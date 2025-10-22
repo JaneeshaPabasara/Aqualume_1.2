@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <!-- App Colors -->
+    <color name="background">#EBF2FA</color>
+    <color name="primary_text">#1F2937</color>
+    <color name="secondary_text">#6B7280</color>
+    <color name="card_stroke">#E5E7EB</color>
+
+    <!-- Water Theme -->
+    <color name="water_primary">#60D5FA</color>
+    <color name="water_light">#A0E7FF</color>
+
+    <!-- Meditation Theme -->
+    <color name="meditation_primary">#FFD93D</color>
+    <color name="meditation_light">#FFE989</color>
+
+    <!-- Mood/Journal Theme -->
+    <color name="mood_primary">#4ADE80</color>
+    <color name="mood_light">#86EFAC</color>
+
+    <!-- Button Colors -->
+    <color name="button_primary">#60D5FA</color>
+    <color name="button_secondary">#E5E7EB</color>
+
+    <!-- Status Colors -->
+    <color name="success">#4ADE80</color>
+    <color name="warning">#FBBF24</color>
+    <color name="error">#F87171</color>
+    <color name="bottom_nav_color">#E5E7EB</color>
+    <color name="bottom_nav_selector">#6BACE2</color>
+
+    <!-- Material Design Colors -->
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+
+</resources>

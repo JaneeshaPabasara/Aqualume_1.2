@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="0dp"
+    app:cardBackgroundColor="@color/white">
+
+    <TextView
+        android:id="@+id/tvDateHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="2dp"
+        android:layout_marginBottom="20dp"
+        android:text="@string/todayy"
+        android:textColor="#666666"
+        android:textSize="14sp"
+        android:fontFamily="sans-serif-medium"
+        android:visibility="gone" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/tv_emoji"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/hapimg"
+            android:contentDescription="@string/mood_emoji"
+            android:textSize="28sp"
+            android:gravity="center" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:layout_marginStart="12dp">
+
+            <TextView
+                android:id="@+id/tv_mood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/happy2"
+                android:textSize="16sp"
+                android:textColor="@color/primary_text"
+                android:fontFamily="sans-serif-medium" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="2dp">
+
+                <TextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/_8_30_amm"
+                    android:textSize="13sp"
+                    android:textColor="@color/secondary_text" />
+
+<!--                <TextView-->
+<!--                    android:id="@+id/tv_date"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="@string/_01_10_20252"-->
+<!--                    android:textSize="13sp"-->
+<!--                    android:textColor="@color/success"-->
+<!--                    android:fontFamily="sans-serif-medium"-->
+<!--                    android:layout_marginStart="8dp"-->
+<!--                    android:visibility="gone" />-->
+            </LinearLayout>
+                <TextView
+                    android:id="@+id/tvNote"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textSize="14sp"
+                    android:textColor="@color/secondary_text"
+                    android:maxLines="3"
+                    android:ellipsize="end"
+                    android:visibility="gone"
+                     />
+
+            </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/iv_edit"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_edit"
+            android:padding="4dp"
+            android:layout_marginEnd="8dp"
+            android:contentDescription="@string/edit" />
+
+        <ImageView
+            android:id="@+id/iv_delete"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_delete"
+            android:padding="4dp"
+            android:contentDescription="@string/deleteee" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>
