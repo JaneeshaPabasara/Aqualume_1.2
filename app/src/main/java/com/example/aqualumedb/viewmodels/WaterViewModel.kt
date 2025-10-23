@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class WaterViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: AqualumeRepository
-    val allWaterLogs = repository.allWaterLogs.asLiveData()
+
 
     init {
         val database = AqualumeDatabase.getDatabase(application)
@@ -24,6 +24,7 @@ class WaterViewModel(application: Application) : AndroidViewModel(application) {
             userSettingsDao = database.userSettingsDao()
         )
     }
+    val allWaterLogs = repository.allWaterLogs.asLiveData()
 
     fun insertWaterLog(waterLog: WaterLog) = viewModelScope.launch {
         repository.insertWaterLog(waterLog)

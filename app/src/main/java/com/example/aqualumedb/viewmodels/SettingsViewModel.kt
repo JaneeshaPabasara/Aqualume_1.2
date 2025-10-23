@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class SettingsViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: AqualumeRepository
-    val userSettings = repository.userSettings.asLiveData()
+
 
     init {
         val database = AqualumeDatabase.getDatabase(application)
@@ -24,6 +24,7 @@ class SettingsViewModel(application: Application) : AndroidViewModel(application
             userSettingsDao = database.userSettingsDao()
         )
     }
+    val userSettings = repository.userSettings.asLiveData()
 
     fun updateUserSettings(settings: UserSettings) = viewModelScope.launch {
         repository.updateUserSettings(settings)

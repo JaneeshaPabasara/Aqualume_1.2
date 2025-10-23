@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class MoodViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: AqualumeRepository
-    val allMoodLogs = repository.allMoodLogs.asLiveData()
+
 
     init {
         val database = AqualumeDatabase.getDatabase(application)
@@ -24,6 +24,7 @@ class MoodViewModel(application: Application) : AndroidViewModel(application) {
             userSettingsDao = database.userSettingsDao()
         )
     }
+    val allMoodLogs = repository.allMoodLogs.asLiveData()
 
     fun insertMoodLog(moodLog: MoodLog) = viewModelScope.launch {
         repository.insertMoodLog(moodLog)

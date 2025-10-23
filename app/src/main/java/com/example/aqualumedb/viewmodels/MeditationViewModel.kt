@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class MeditationViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: AqualumeRepository
-    val allMeditationLogs = repository.allMeditationLogs.asLiveData()
+
 
     init {
         val database = AqualumeDatabase.getDatabase(application)
@@ -24,6 +24,7 @@ class MeditationViewModel(application: Application) : AndroidViewModel(applicati
             userSettingsDao = database.userSettingsDao()
         )
     }
+    val allMeditationLogs = repository.allMeditationLogs.asLiveData()
 
     fun insertMeditationLog(meditationLog: MeditationLog) = viewModelScope.launch {
         repository.insertMeditationLog(meditationLog)

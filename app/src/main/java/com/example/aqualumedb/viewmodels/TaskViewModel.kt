@@ -11,7 +11,7 @@ import kotlinx.coroutines.launch
 
 class TaskViewModel(application: Application) : AndroidViewModel(application) {
     private val repository: AqualumeRepository
-    val allTasks = repository.allTasks.asLiveData()
+
 
     init {
         val database = AqualumeDatabase.getDatabase(application)
@@ -24,6 +24,7 @@ class TaskViewModel(application: Application) : AndroidViewModel(application) {
             userSettingsDao = database.userSettingsDao()
         )
     }
+    val allTasks = repository.allTasks.asLiveData()
 
     fun insertTask(task: Task) = viewModelScope.launch {
         repository.insertTask(task)

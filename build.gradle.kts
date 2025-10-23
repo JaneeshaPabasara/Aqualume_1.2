@@ -3,19 +3,18 @@ buildscript {
     repositories {
         google()
         mavenCentral()
-        maven { url= uri("https://jitpack.io") }
+        maven { url = uri("https://jitpack.io") }
     }
     dependencies {
-        classpath ("com.android.tools.build:gradle:8.2.0")
-        classpath ("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
-        classpath ("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.6")
+        classpath("com.android.tools.build:gradle:8.2.0")
+        classpath("org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.20")
+        classpath("androidx.navigation:navigation-safe-args-gradle-plugin:2.7.6")
     }
 }
-plugins {
-//    alias(libs.plugins.android.application) apply false
-//    alias(libs.plugins.kotlin.android) apply false
-    id ("com.android.application") version "8.2.0" apply false
-    id ("com.android.library") version "8.2.0" apply false
-    id ("org.jetbrains.kotlin.android") version "1.9.20" apply false
-}
 
+plugins {
+    id("com.android.application") version "8.2.0" apply false
+    id("com.android.library") version "8.2.0" apply false
+    id("org.jetbrains.kotlin.android") version "1.9.20" apply false
+    id("com.google.devtools.ksp") version "1.9.20-1.0.14" apply false
+}
