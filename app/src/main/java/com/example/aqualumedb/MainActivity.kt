@@ -12,6 +12,7 @@ import android.content.pm.PackageManager
 import android.os.Build
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
+import com.example.aqualumedb.utils.DataMigrationHelper
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,6 +22,12 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        // Migrate existing SharedPreferences data to Room Database
+        val migrationHelper = DataMigrationHelper(this)
+        if (!migrationHelper.isMigrationCompleted()) {
+            migrationHelper.migrateDataToRoom()
+        }
 
         // Request notification permission
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
